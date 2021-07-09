@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FentYourBeauty</title>
+  <!---to ensure proper rendering and touch zooming in mobile phones-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" > 
+<!--font awesome icons CDN-->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+
+  <!--external css-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<!-----external javascript----->
+<link rel="stylesheet" type="text/css" href="js/App.js">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: black;
+  padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/* -- for loader -- */
+.loader{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader.hidden{
+  animation:fadeOut 3s;
+  animation-fill-mode: forwards;
+}
+.loader img{
+  width: 80px;
+}
+
+@keyframes fadeOut{
+100%{
+  opacity: 0;
+  visibility: hidden;
+}
+}
+/* -- End of loader -- */
+
+</style>
+</head>
+<body id="myPage">
+   <!---landing part---------------------------------->
+    <!--  <section class="wrapper" id="parallax-1">
+      <div class="overlay">
+ -->
+<!--------------_---------------------------->
+    <header class="d-flex-r clear justify-content-space-between" style="background-color: black; color: white;">
+ <!-------------------logo--------------------->
+ <div class="my-1" id="logo" style="padding-top: 15px; font-size: 30px; float: left;">FENTYBEAUTY<a href="index.html"></a></div>
+
+
+ <!------------navigation bar------------>
+      <nav class="fl_right font-xs text-uppercase" id="main-navbar" >
+      <ul class="clear">
+<li><a href="index.html" style="font-size: 20px; ">Home</a></li>
+<li><a href="Products.html" style="font-size: 20px;  padding: 30px; background-color: white; color: black;">Products</a></li>
+<li><a href="Skin.html"style="font-size: 20px;">Skin Care</a></li>
+<li><a href="Hair.html" style="font-size: 20px;">Hair Care</a></li>
+<li><a href="Contact.html"style="font-size: 20px;">Contact Us</a></li>
+<li><a href="About.html" style="font-size: 20px;">About Us</a></li>
+<li><a href="bag.html" style="font-size: 20px;"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+ <li><a href="search.html" style="font-size: 20px;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+    
+</ul>  
+    </nav>
+
+
+</header> 
+
+
+ </div>
+ </section>
+    </div>
+
+       <!-- loader  -->
+  <div class="loader ">
+    <img src="img/loading.gif" alt="loading">
+  </div>
+
+  <!-- loader js  -->
+<script type="text/javascript">
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; // class "loader hidden"
+});
+</script>
+
+    <!-- End of Loader section  -->
+  </div>
+  <div class="small-container" style="background-color: white; color: black;">
+    <div class="row row-2">
+      <h2>All Products</h2>
+      <select>
+        <option> Default Sorting</option>
+        <option> Sort by Price</option>
+        <option> Sort by Popularity</option>
+        <option> Sort by Rating</option>
+        <option> Sort by Sale</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col-4" style="font-size: 20px;">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4 >Spooli</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.87,102</p>
+             <button class="btn" id="myBtn" onclick="javascript:alert('One product added to your list')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Brush</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+       <p>Rs.87,102</p>
+       <button class="btn" id="myBtn" onclick="javascript:alert('One product added to your list')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+         
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4>Mascara </h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.87,900</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs.1280,21211</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('One product added to your list')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara </h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.87,102</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('One product added to your list')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Wasenda</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.2,000</p>
+           <button class="btn" id="myBtn" onclick="javascript:alert('One product added to your list')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+
+        </div>
+        <p>Rs.87,102</p>
+           <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.55,999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+    </div>
+    <div class="row row-2">
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs.87,102</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>MobiStand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs.5,000</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+       <p>Rs.87,102</p>
+           <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Rs.10,000</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.87,102</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascara Wand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.1,999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascarnd</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.5,999</p>
+                    <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Mascd</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+    </div>
+    <div class="row row-2">
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwd6f223a4/hi-res/41654_alt2.jpg?sw=290">
+        <h4>Mascarand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>Deatoinspiron</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>MaaraWand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+       <p>Rs.911,99</p>
+           <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+      <div class="col-4">
+        <img src="https://www.fentybeauty.com/dw/image/v2/AAXW_PRD/on/demandware.static/-/Sites-itemmaster_FNT/default/dwa2baa9ca/hi-res/27464_alt1.jpg?sw=290">
+        <h4>MascaraWand</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>       
+        </div>
+        <p>Rs.999</p>
+            <button class="btn" id="myBtn" onclick="javascript:alert('You Removed One Product !')">ADD TO CART</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+      </div>
+    </div>
+    <div class="page-btn" style="color: black;">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>&#8594;</span>
+    </div>
+    </div>
+
+<!------footer--->
+<div class="wrapper bg-green" >
+  <footer class="d-flex-r clear container text-white" id="main-footer" style="height: 400px;">
+    <div class="mx-2">
+      <!----<h6 class="heading font-x1 my-1">contact us</h6>-->
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594581.399176431!2d81.88611403511933!3d28.37899651599692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2snp!4v1619143173171!5m2!1sen!2snp" width="500" height="250" style="border:0; outline:none;" allowfullscreen="" loading="lazy"></iframe>
+      <ul class="nospace linkedlist contact">
+        
+      </ul>
+    </div>
+
+  
+  
+<div class="mx-3 " id="company"  style = "font-size: 20px; letter-spacing: 2px; line-height: 1; width: 250; height: 250;">
+    <p >Contact Us</p>  
+      <p >About Us </p>
+  <p ><i class="fa fa-map-marker" aria-hidden="true"> &nbsp;Kathmandu, Nepal</i><p>
+  <p><i class="fa fa-phone" aria-hidden="true"> &nbsp;9180218021</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;Fenty192@gmail.com</p>
+    
+    
+</div>
+<!-- <div class="mx-4 " id="company" style=" font-size: 20px; letter-spacing: 2px; line-height: 2;">
+    
+  
+    
+
+
+    
+    
+</div>
+ -->
+
+  </footer>
+  <div class="d-flex-r clear justify-content-space-between" id="copyright">
+    <p class="d-flex-r">copyright &copy; 2020-All Rights Reserved-<a href="#">FentYourBeauty</a></p>
+    <a href="#myPage" id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+  </div>
+</div>
+
+</body>
+</html>

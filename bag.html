@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FentYourBeauty</title>
+	<!---to ensure proper rendering and touch zooming in mobile phones-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" > 
+<!--font awesome icons CDN-->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+
+	<!--external css-->
+	<link rel="stylesheet" type="text/css" href="css/bag.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-----external javascript----->
+<link rel="stylesheet" type="text/css" href="js/App.js">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.alert {
+  padding: 25px;
+  background-color: green;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color:white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>THANK YOU!!!</strong>&nbsp;Your Products has been added succesfully!!!
+</div>
+
+
+</head>
+<body id="myPage">
+
+ <!---landing part---------------------------------->
+     <section class="wrapper" >
+     	<div class="overlay">
+
+<!--------------_---------------------------->
+    <header class="d-flex-r clear justify-content-space-between" style="color: white; background-color: black;">
+ <!-------------------logo--------------------->
+ <div class="my-1" id="logo" style="padding-top: 30px; font-size: 30px;">FENTYBEAUTY<a href="index.html"></a></div>
+
+
+ <!------------navigation bar------------>
+      <nav class="fl_right font-xs text-uppercase" id="main-navbar" >
+      <ul class="clear" style="color: white; font-size: 20px; ">
+<li><a href="index.html">Home</a></li>
+<li><a href="Products.html" >Products</a></li>
+<li><a href="Skin.html">Skin Care</a></li>
+<li><a href="Hair.html" >Hair Care</a></li>
+<li><a href="Contact.html">Contact Us</a></li>
+<li><a href="About.html" >About Us</a></li>
+<li><a href="bag.html"  style="color: black; background-color: white; padding: 30px;"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+<li><a href="search.html" ><i class="fa fa-search" aria-hidden="true"></i></a></li>
+
+
+</ul>  
+    </nav>
+
+
+</header> 
+
+<!----text section----> <!---------------- cart  details ------------------>
+
+
+    <div class="small-container cart" style="color: black; padding-top: 50px;">
+        <table>
+            <tbody><tr>
+                <th>Product-List</th>
+                <th>Quantity</th>
+                <th>Grandtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Info-cart">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/8719/5183/products/KS_COCONUT-BODY-LOTION-TUBE_2_720x.jpg?v=1619637541">
+                        <div>
+                            <h3>Mosturizer<br>Price: Rs.22,25.00</h3> 
+                       <!-- <p></p> -->     
+<button id="myBtn" onclick="javascript:alert('You Removed One Product !')">Remove</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>Rs.80,000.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="Info-cart">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/8719/5183/products/KS_Rose-Bath-Trio_Ecomm_01_720x.jpg?v=1616610781">
+                        <div>
+                            <h3>Mosturizer<br>Price: Rs.22,25.00</h3> 
+                       <!-- <p></p> -->     
+<button id="myBtn" onclick="javascript:alert('You Removed One Product !')">Remove</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+                    </div>
+                </td>
+                <td><input type="number" value="2"></td>
+                <td>Rs.3,100.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="Info-cart">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/8719/5183/products/KS_Rose-Bath-Trio_Ecomm_01_720x.jpg?v=1616610781">
+                        <div>
+                      <h3>Mosturizer<br>Price: Rs.22,25.00</h3> 
+                       <!-- <p></p> -->     
+<button id="myBtn" onclick="javascript:alert('You Removed One Product !')">Remove</button>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>Rs.22,250.00</td>
+            </tr>
+        </tbody></table>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <div class="Grandtotal-price" style="padding-bottom: 30px;">
+            <table>
+                <tbody><tr>
+                    <td>Subtotal</td>
+                    <td>Rs.1,05,350.00</td>
+                </tr>
+                <tr>
+                    <td>Tax(13%)</td>
+                    <td>Rs.13695.50</td>
+                </tr>
+                <tr>
+                    <td>Discount(2%)</td>
+                    <td>Rs.21070</td>
+                </tr>
+                <tr>
+                    <td>Grand Total</td>
+                    <td>Rs.97,975.50</td>
+                </tr>
+            </tbody></table>
+
+        </div>
+    </div>
+
+    </div>
+  </section>
+    
+
+   
+
+<!------footer--->
+<div class="wrapper bg-green" >
+  <footer class="d-flex-r clear container text-white" id="main-footer" style="height: 400px;">
+    <div class="mx-2">
+      <!----<h6 class="heading font-x1 my-1">contact us</h6>-->
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594581.399176431!2d81.88611403511933!3d28.37899651599692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2snp!4v1619143173171!5m2!1sen!2snp" width="500" height="250" style="border:0; outline:none;" allowfullscreen="" loading="lazy"></iframe>
+      <ul class="nospace linkedlist contact">
+        
+      </ul>
+    </div>
+
+  
+  
+<div class="mx-3 " id="company"  style = "font-size: 20px; letter-spacing: 2px; line-height: 1; width: 250; height: 250;">
+    <p >Contact Us</p>  
+      <p >About Us </p>
+  <p ><i class="fa fa-map-marker" aria-hidden="true"> &nbsp;Kathmandu, Nepal</i><p>
+  <p><i class="fa fa-phone" aria-hidden="true"> &nbsp;9180218021</i></p>
+  <p><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;Fenty192@gmail.com</p>
+    
+    
+</div>
+
+  </footer>
+  <div class="d-flex-r clear justify-content-space-between" id="copyright">
+    <p class="d-flex-r">copyright &copy; 2020-All Rights Reserved-<a href="#">FentYourBeauty</a></p>
+    <a href="#myPage" id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+  </div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
